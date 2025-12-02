@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 import requests
 
-API_URL = "http://127.0.0.1:8000/predict"
+API_URL = "https://abdoghazala7-brain-tumor-classification-api.hf.space/predict"
 
 # --- Page Configuration ---
 st.set_page_config(
@@ -41,7 +41,7 @@ with st.sidebar:
     st.markdown("---")
     
     try:
-        health_check = requests.get("http://127.0.0.1:8000/")
+        health_check = requests.get("https://abdoghazala7-brain-tumor-classification-api.hf.space/")
         if health_check.status_code == 200:
             st.success("🟢 API System Online")
         else:
